@@ -9,7 +9,7 @@ int complete_time(vector<vector<int>> &children, int x) {
     return 0;
   }
 
-  int max_receive_time = 0;
+  int  max_receive_time = 0;
 
   for (int c : children.at(x)) {
     int receive_time = complete_time(children, c) + 1;
@@ -18,7 +18,6 @@ int complete_time(vector<vector<int>> &children, int x) {
   }
 
   return max_receive_time;
-
 }
  
 // これ以降の行は変更しなくてよい
