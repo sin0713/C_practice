@@ -35,6 +35,7 @@ int main() {
       if (j > 0) {
         chmin(dp[i][j], dp[i][j - 1] + 1);
       }
+      
 
     }
   }
