@@ -8,7 +8,8 @@ using namespace std;
 
 bool isSquare(long long n) {
   long long d = (long long)sqrt(n) - 1;
-  
+  while(d * d < n) d++;
+  return d * d == n;
 }
 
 int main() {
@@ -23,9 +24,15 @@ int main() {
     }
   }
 
+  int ans = 0;
+
   rep(i, 0, N) {
-    rep(j, i + 1, N)
+    rep(j, i + 1, N) {
+      int dd = 0;
+      rep(d, 0, D) dd += (X[i][d] - X[j][d]) * (X[i][d] - X[j][d]);
+      if(isSquare(dd)) ans++;
+    }
   }
 
-  int d = 0;
+  cout << ans << endl;
 }
