@@ -25,24 +25,36 @@ void visit(int x, int y) {
 }
 
 
-int max = 7;
-vector<vector<Cell> maze(max, vector<Cell>(max));
+const int size = 7;
+vector<vector<Cell*>> maze(size, vector<Cell*>(size));
 
 void init() {
-  for (int i = 0; i < max; i++) {
-    for (int j = 0; j < max; j++) {
-      if (i == 0 || j == 0 || i = max - 1 || j == max - 1) {
-        maze[i][j] = Cell(NG);
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      if (i == 0 || j == 0 || i == size - 1 || j == size - 1) {
+        maze[i][j] = new Cell(NG);
         continue;
       }
-      maze[i][j] = Cell(OK);
+      maze[i][j] = new Cell(OK);
     }
   }
 
 }
 
 int main() {
+  init();
 
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      Cell* cell = maze[i][j];
+      if (cell->State() == OK) {
+        cout << "1 ";
+      } else {
+        cout << "0 ";
+      }
+    }
+    cout << endl;
+  }
 
   return 0;
 }
