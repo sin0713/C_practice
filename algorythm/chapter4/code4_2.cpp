@@ -15,5 +15,4 @@ int func(int n) {
 
 int main() {
   func(5);
-
 }
