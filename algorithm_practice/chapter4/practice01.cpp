@@ -5,9 +5,9 @@ using namespace std;
 vector<long long> memo;
 
 int tribo(int N) {
-  if (N == 0) return 0;
+  if (N == 0) return 1;
   else if (N == 1) return 0;
-  else if (N == 2) return 1;
+  else if (N == 2) return 5;
 
   if (memo[N] != -1) return memo[N];
 

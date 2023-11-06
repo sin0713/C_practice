@@ -1,6 +1,10 @@
 {
   "files.associations": {
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "ostream": "cpp",
+    "vector": "cpp",
+    "cmath": "cpp"
   },
-  "C_Cpp.errorSquiggles": "Disabled"
+  "C_Cpp.errorSquiggles": "Disabled",
+  "terminal.integrated.fontSize": 15
 }
